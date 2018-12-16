@@ -34,3 +34,4 @@ class Solution(object):
             p = p.next
             idx += 1
         return ret
+
