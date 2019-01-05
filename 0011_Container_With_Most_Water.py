@@ -33,7 +33,6 @@ class Solution(object):
                 if sq > max_h * (b - a):
                     break
                 val = h * (b - a)
-#                print(val)
                 if sq < val:
                     sq = val
         return sq
