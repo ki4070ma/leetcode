@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+string = input()
+alphaUpper = []
+alphaLower = []
+digitsOdd = []
+digitsEven = []
+for c in list(string):
+    if c.isalpha():
+        if c.isupper():
+            alphaUpper.append(c)
+        elif c.islower():
+            alphaLower.append(c)
+    elif c.isdigit():
+        if eval(c) % 2 == 0:
+            digitsEven.append(c)
+        else:
+            digitsOdd.append(c)
+
+print(''.join(sorted(alphaLower)) + ''.join(sorted(alphaUpper)) + ''.join([str(x) for  x in sorted(digitsOdd)]) + ''.join([str(x) for x in sorted(digitsEven)]))
