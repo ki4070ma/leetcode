@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+len_lines = input()
+d = {}
+for i in range(int(len_lines)):
+    word = input()
+    if word in d.keys():
+        d[word] += 1
+    else:
+        d[word] = 1
+
+print(len(d.keys()))
+print(' '.join([str(x) for x in d.values()]))
