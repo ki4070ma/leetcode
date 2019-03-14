@@ -1,0 +1,25 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+length = input()
+string = input()
+idx = input()
+#print(idx)
+
+length = eval(length)
+string_list = string.split()
+#print(eval(idx)-1)
+letter = string_list[eval(idx)-1]
+
+all_num = length * (length - 1) / 2
+
+count = 0
+#print('** %c' % letter)
+for n in range(length-1):
+    for m in range(n+1, length):
+        for i in range(eval(idx)-1):
+#            print(string_list[n], string_list[m])
+            if string_list[i] in [string_list[n], string_list[m]]:
+                count += 1
+
+#print(all_num)
+#print(count)
+print(count / all_num)
