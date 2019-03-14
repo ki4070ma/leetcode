@@ -1,0 +1,26 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+l1 = input()
+nums = input()
+A = input()
+B = input()
+
+dA = {}
+for x in A.split():
+    if x in dA.keys():
+        dA[x] += 1
+    else:
+        dA[x] = 1
+
+dB = {}
+for x in B.split():
+    if x in dB.keys():
+        dB[x] += 1
+    else:
+        dB[x] = 1
+
+score = 0
+for num in nums.split():
+    score += dA.get(num, 0)
+    score -= dB.get(num, 0)
+
+print(score)
