@@ -1,0 +1,13 @@
+def merge_the_tools(string, k):
+    num = int(len(string) / k)
+    for i in range(num):
+        tmp = ''
+        for a in list(string[i*num:i*num+k]):
+            if not tmp or (tmp and a not in tmp):
+                tmp +=a
+        print(tmp)
+
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
