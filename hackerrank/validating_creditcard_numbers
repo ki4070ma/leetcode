@@ -1,0 +1,28 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+k = input()
+for i in range(eval(k)):
+    nums = input()
+    if nums[0] not in ['4', '5', '6']:
+        print('Invalid')
+        continue
+    if '-' in nums:
+        if False in [len(num4) == 4 for num4 in nums.split('-')]:
+            print('Invalid')
+            continue
+    if len(nums.replace('-', '')) != 16:
+        print('Invalid')
+        continue
+    import re
+    is_valid = True
+    for i in range(10):
+        if re.search(r"%d{4}" % i, nums.replace('-', '')):
+            is_valid = False
+            break
+    if not is_valid:
+        print('Invalid')
+        continue
+    for c in list(nums.replace('-', '')):
+        if not c.isdigit():
+            print('Invalid')
+            continue
+    print('Valid')
