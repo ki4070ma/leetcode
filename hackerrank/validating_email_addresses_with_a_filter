@@ -1,0 +1,19 @@
+def fun(s):
+    l1 = s.split('@')
+    if len(l1[0]) == 0 or len(l1) != 2:
+        return False
+    username, l2 = l1
+    l3 = l2.split('.')
+    if len(l3) != 2:
+        return False
+    websitename, extension = l3
+    for c in list(username):
+        if not c.isalnum() and c not in ['-', '_']:
+            return False
+    for c in list(websitename):
+        if not c.isalnum():
+            return False
+    if len(extension) > 3:
+        return False
+    return s
+ 
