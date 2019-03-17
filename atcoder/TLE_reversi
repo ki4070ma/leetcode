@@ -1,0 +1,26 @@
+n = int(input())
+l = []
+for _ in range(n):
+	l.append(eval(input()))
+
+ret = 0
+l_store = []
+l_store.append(l)
+for n in set(l):
+    indexes = [i for i, x in enumerate(l) if x == n]
+    if len(indexes) < 2:
+        continue
+#    print(indexes)
+    for i in range(len(indexes)-1):
+      	for j in range(i+1, len(indexes)):
+#            print(i, j)
+            lidx = indexes[i]
+            ridx = indexes[j]
+            val = l[lidx]
+            tmp_l = l[::]
+            for k in range(lidx, ridx):
+                tmp_l[k] = val
+            if tmp_l not in l_store:
+                l_store.append(tmp_l)
+#print(l_store)
+print(len(l_store))
