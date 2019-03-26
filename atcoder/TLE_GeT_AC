@@ -1,0 +1,6 @@
+a, loop = input().split()
+string = input()
+
+for i in range(int(loop)):
+  j, k = input().split()
+  print(string[int(j)-1:int(k)].count('AC'))
