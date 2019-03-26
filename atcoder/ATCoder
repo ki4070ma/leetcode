@@ -1,0 +1,18 @@
+string = input()
+acgt = ['A', 'C', 'G', 'T']
+
+max_length_str = ''
+tmp_str = ''
+for n in string:
+  if n in acgt:
+    tmp_str += n
+  else:
+    if len(tmp_str) > len(max_length_str):
+      max_length_str = tmp_str
+      tmp_str = ''
+
+if len(tmp_str) > len(max_length_str):  # TODO double codes
+  max_length_str = tmp_str
+  tmp_str = ''
+
+print(len(max_length_str))
