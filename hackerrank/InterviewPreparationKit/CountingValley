@@ -1,0 +1,16 @@
+# Successful in 1st submit :)
+def countingValleys(n, s):
+    sea_level = 0
+    sea_level_sequences = '0'  # 0, L, H
+    for n in list(s):
+        if n == 'U':
+            sea_level += 1
+        elif n == 'D':
+            sea_level -= 1
+        if sea_level > 0:
+            sea_level_sequences += 'H'
+        elif sea_level == 0:
+            sea_level_sequences += '0'
+        elif sea_level < 0:
+            sea_level_sequences += 'L'
+    return len([True for x in sea_level_sequences.split('0') if 'L' in x])
