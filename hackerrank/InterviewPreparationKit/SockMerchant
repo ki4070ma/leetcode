@@ -1,0 +1,13 @@
+# Brute force
+def sockMerchant(n, ar):
+    d = {}
+    for n in ar:
+        if n in d.keys():
+            d[n] += 1
+        else:
+            d[n] = 1
+#    print(d)
+    ret = 0
+    for i in d.keys():
+        ret += int(d[i]/2)
+    return ret
