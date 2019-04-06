@@ -1,0 +1,7 @@
+# 1st submit passed :)
+def repeatedString(s, n):
+    a_num_in_input = s.count('a')
+    ret = a_num_in_input * int(n / len(s))
+    mod = n % len(s)
+    ret += s[:mod].count('a')
+    return ret
