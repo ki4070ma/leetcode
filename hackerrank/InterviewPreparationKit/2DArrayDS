@@ -1,0 +1,14 @@
+def hourglassSum(arr):
+    max_val = -sys.maxsize
+    for line in range(0, len(arr)-2):  # Hourglass is 3x3
+        for row in range(0, len(arr[0])-2):
+#            print(arr[line][row:row+3])
+#            print(arr[line+1][row:row+3])
+#            print(arr[line+2][row:row+3])
+            val = sum(arr[line][row:row+3])
+            val += arr[line+1][row+1]
+            val += sum(arr[line+2][row:row+3])
+            if val > max_val:
+#                print('max val!')
+                max_val = val
+    return max_val
