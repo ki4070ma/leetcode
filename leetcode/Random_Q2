@@ -1,0 +1,8 @@
+class Solution:
+    def customSortString(self, S: str, T: str) -> str:
+        ret = ''
+        for s in list(S):
+            while s in T:
+                T = T.replace(s, '', 1)
+                ret += s
+        return ret + T
