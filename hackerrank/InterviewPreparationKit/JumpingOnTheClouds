@@ -1,0 +1,8 @@
+def jumpingOnClouds(c):
+    zero_list = ''.join(map(str, c)).split('1')
+    while '0' in zero_list:
+        zero_list.remove('0')
+    ret = c.count(1)
+    for val in zero_list:
+        ret += math.ceil((len(val)-1)/2)
+    return ret
