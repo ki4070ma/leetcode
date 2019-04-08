@@ -1,0 +1,17 @@
+# Complete the minimumBribes function below.
+def minimumBribes(q):
+#    print(q)
+    for n, m in zip(range(1, len(q)+1), q):
+ #       print(m , n)
+        if m - n > 2:
+            print('Too chaotic')
+            return
+ #   print('Not too chaotic')
+    ret = 0
+    for val in range(1, len(q)+1):  # val
+        idx = q.index(val)
+        if idx - val + 1 > 0:
+            ret += idx - val + 1
+            q.remove(val)
+            q.insert(val-1, val)
+    print(ret)
