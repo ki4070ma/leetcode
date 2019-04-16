@@ -1,0 +1,2 @@
+def twoStrings(s1, s2):
+    return 'YES' if len(set(list(s1)) & set(list(s2))) > 0 else 'NO'
