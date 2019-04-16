@@ -1,0 +1,33 @@
+def checkMagazine(magazine, note):
+    # All passed
+    d_magazine = {}
+    for word in magazine:
+        if word in d_magazine.keys():
+            d_magazine[word] += 1
+        else:
+            d_magazine[word] = 1
+    d_note = {}
+    for word in note:
+        if word in d_note.keys():
+            d_note[word] += 1
+        else:
+            d_note[word] = 1
+    for key in d_note.keys():
+        if key not in d_magazine.keys():
+            print('No')
+            return
+        else:
+            if d_magazine[key] < d_note[key]:
+                print('No')
+                return
+    print('Yes')
+    return
+
+    # old - Time limit exceeded
+    for word in note:
+        #print(word)
+        if word not in magazine:
+            print("No")
+            return
+        magazine.remove(word)
+    print("Yes")
