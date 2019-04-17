@@ -1,0 +1,22 @@
+# Anagramになっていないl。。。
+
+def sherlockAndAnagrams(s):
+    ret = 0
+    for length in range(1, len(s)):
+        for pos in range(len(s) - length):
+            s_copy = s[pos+1:]
+            print('****')
+            print(pos)
+            print(length)
+            word = s[pos:pos+length][::-1]
+            if len(word) == 1:
+#               s_copy.replace(word, '')
+                ret += s_copy.count(word)
+            else:
+                while word in s_copy:
+                    ret += 1
+                    s_copy = s_copy.replace(word, word[:-1])
+                    print('****')
+                    print(word)
+                    print(s_copy)
+    return ret
