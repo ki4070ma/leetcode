@@ -1,0 +1,25 @@
+# Too long...
+
+def makeAnagram(a, b):
+    dict_a = {}
+    for x in a:
+        if x not in dict_a.keys():
+            dict_a[x] = 1
+        else:
+            dict_a[x] += 1
+    dict_b = {}
+    for x in b:
+        if x not in dict_b.keys():
+            dict_b[x] = 1
+        else:
+            dict_b[x] += 1
+    ret = 0
+    for key in dict_a.keys():
+        if key not in dict_b.keys():
+            ret += dict_a[key]
+        else:
+            ret += abs(dict_a[key] - dict_b[key])
+            del dict_b[key]
+    for key in dict_b.keys():
+        ret += dict_b[key]
+    return ret
