@@ -1,0 +1,13 @@
+def wrap(string, max_width):
+    import math
+    round = math.ceil(len(string) / max_width)
+    ret = ''
+    for i in range(round):
+        end = (i+1)*max_width
+        if end > len(string):
+            end = None
+        if ret:
+            ret = '{}\n{}'.format(ret, string[i*max_width:end])
+        else:
+            ret = string[i*max_width:end]
+    return ret
