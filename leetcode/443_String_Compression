@@ -7,7 +7,6 @@ class Solution:
             if prev_c == c:
                 count += 1
             else:
-                print(len(chars[1:]) - 1)
                 ret.append(prev_c)
                 if count != 1:
                     for n in list(str(count)):
