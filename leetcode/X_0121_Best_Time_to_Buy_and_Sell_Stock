@@ -1,0 +1,16 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        l = range(len(prices))
+        ret = 0
+        if prices:
+            sell_val_max = max(prices)
+            sell_val_max_index = prices.index(sell_val_max)
+        for i, buy_val in enumerate(prices[:-1]):
+            if i > sell_val_max_index:
+                sell_val_max = max(prices[i:])
+                sell_val_max_index = prices.index(sell_val_max)
+            profit = sell_val_max - buy_val
+            if profit > ret:
+                current_buy_val = buy_val
+                ret = profit
+        return ret
