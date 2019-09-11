@@ -1,0 +1,9 @@
+predict_weather = list(input())
+actual_weather = list(input())
+
+count = 0
+for i in range(len(predict_weather)):
+  if predict_weather[i] == actual_weather[i]:
+    count += 1
+
+print(count)
