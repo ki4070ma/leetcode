@@ -7,9 +7,12 @@ for _ in range(4):
 
     N, M = map(int, stdin.readline().rstrip().split())
     S = list(map(int, stdin.readline().rstrip().split()))
-    import numpy
+    S = [-x for x in S]
+    import heapq
+
+    heapq.heapify(S)
 
     for i in range(M):
-        max_val = numpy.max(S)
-        S[S.index(max_val)] = max_val / 2
-    print(int(sum(S)))
+        val = int(heapq.heappop(S) / 2)
+        heapq.heappush(S, val)
+    print(-sum(S))
