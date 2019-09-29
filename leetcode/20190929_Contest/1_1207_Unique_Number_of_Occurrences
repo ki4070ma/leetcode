@@ -1,0 +1,15 @@
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        d = {}
+        for val in arr:
+            if val not in d.keys():
+                d[val] = 1
+            else:
+                d[val] += 1
+        prev_val = -1001
+        for val in sorted(list(d.values())):
+            if prev_val != val:
+                prev_val = val
+            else:
+                return False
+        return True
