@@ -1,0 +1,25 @@
+# TLE
+
+class Solution:
+    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
+        dist = []
+        for i in range(len(s)):
+            dist.append(abs(ord(s[i])-ord(t[i])))
+        for length in range(len(s))[::-1]:
+            for i in range(len(s) - length):
+                if sum(dist[i:i+length+1]) <= maxCost:
+                    return len(dist[i:i+length+1])
+        return 0
+
+# OK
+class Solution:
+    def removeDuplicates(self, s: str, k: int) -> str:
+        update_flg = True
+        while update_flg:
+            update_flg = False
+            length = len(s)
+            for c in list(set(list(s))):
+                s = s.replace(c*k, '')
+            if length != len(s):
+                update_flg = True
+        return s
