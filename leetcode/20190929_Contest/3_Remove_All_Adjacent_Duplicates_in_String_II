@@ -1,0 +1,13 @@
+# TLE
+
+class Solution:
+    def removeDuplicates(self, s: str, k: int) -> str:
+        update_flg = True
+        while update_flg:
+            update_flg = False
+            for i in range(len(s)-k+1):
+                if [s[i]]*k == list(s[i:i+k]):
+                    s = s[:i] + '1'*k + s[i+k:]
+                    update_flg = True
+            s = s.replace('1', '')
+        return s
