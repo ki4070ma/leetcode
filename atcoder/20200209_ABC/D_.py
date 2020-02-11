@@ -1,27 +1,28 @@
 #!/usr/bin/python3
 
 
-for _ in range(3):
-    from collections import deque
+for _ in range(9):
 
     N, K = map(int, input().rstrip().split())
     Ps = [int(x) for x in input().rstrip().split()]
 
+    Ps_sum_list = []
+    Ps_sum = 0
+    for x in Ps:
+        Ps_sum += x
+        Ps_sum_list.append(Ps_sum)
+
+    max_val = 0
     if K == 1:
-        print((max(Ps) + 1) / 2)
+        max_val = max(Ps)
+        print((max_val + 1) / 2)
+    elif N == K:
+        max_val = Ps_sum_list[-1]
+        print((max_val + K) / 2)
     else:
-        max_val = 0
-        d = deque(maxlen=K)
-        for i, n in enumerate(Ps):
-            if i < K:
-                d.append(n)
-                continue
-            popleft_val = d.popleft()
-            d.append(n)
-            if popleft_val >= n:
-                continue
-            val = sum(d)
-            if max_val < val:
+        for i in range(N - K):
+            val = Ps_sum_list[i + K] - Ps_sum_list[i]
+            if val > max_val:
                 max_val = val
         print((max_val + K) / 2)
 
