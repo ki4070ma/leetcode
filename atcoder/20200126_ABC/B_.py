@@ -7,6 +7,6 @@ for _ in range(4):
     As = [int(x) for x in input().rstrip().split()]
     total_attack = sum(As)
     if H > total_attack:
-        print('No')
+        print("No")
     else:
-        print('Yes')
+        print("Yes")

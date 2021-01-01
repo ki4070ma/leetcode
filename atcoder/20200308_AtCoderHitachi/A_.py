@@ -2,7 +2,7 @@
 
 for _ in range(4):
     S = input().rstrip()
-    if S.replace('hi', ''):
-        print('No')
+    if S.replace("hi", ""):
+        print("No")
     else:
-        print('Yes')
+        print("Yes")

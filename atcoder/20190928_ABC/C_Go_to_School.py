@@ -10,4 +10,4 @@ for _ in range(1):
     for i, num_student in enumerate(As):
         data[i + 1] = num_student
     sorted_dict = sorted(data.items(), key=lambda x: x[1])
-    print(' '.join(map(str, [x[0] for x in sorted_dict])))
+    print(" ".join(map(str, [x[0] for x in sorted_dict])))

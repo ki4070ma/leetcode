@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Solution(object):
     def findMedianSortedArrays(self, nums1, nums2):
         """
@@ -10,6 +11,6 @@ class Solution(object):
         l = sorted(nums1 + nums2)
         length = len(l)
         if len(l) % 2 == 1:
-            return l[length/2]
+            return l[length / 2]
         else:
-            return (l[length/2 - 1] + l[length/2])/2.0
+            return (l[length / 2 - 1] + l[length / 2]) / 2.0

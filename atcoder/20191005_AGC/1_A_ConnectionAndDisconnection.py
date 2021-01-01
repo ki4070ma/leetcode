@@ -6,7 +6,7 @@ for _ in range(13):
     S = stdin.readline().rstrip()
     K = int(stdin.readline().rstrip())
 
-    pre_str = ''
+    pre_str = ""
     count = 1
     base_count = 0
     for a in list(S):

@@ -1,17 +1,22 @@
 #!/usr/bin/python3
 
+
 class Solution:
     def isValid(self, s):
         """
         :type s: str
         :rtype: bool
         """
-        if s.count('(') != s.count(')') or s.count('{') != s.count('}') or s.count('[') != s.count(']'):
+        if (
+            s.count("(") != s.count(")")
+            or s.count("{") != s.count("}")
+            or s.count("[") != s.count("]")
+        ):
             return False
 
         stack = []
-        left_gp = {'(': ')', '{': '}', '[': ']'}
-        right_gp = {')': '(', '}': '{', ']': '['}
+        left_gp = {"(": ")", "{": "}", "[": "]"}
+        right_gp = {")": "(", "}": "{", "]": "["}
 
         for c in list(s):
             if c in left_gp.keys():

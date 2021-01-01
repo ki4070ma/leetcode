@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-
 for _ in range(9):
     import math
 
@@ -12,4 +11,8 @@ for _ in range(9):
         H = H * 5 + (float(M) / 12)
         kakudo = abs(H - M)
         kakudo *= 6
-        print(math.sqrt(float(a * a) + float(b * b) - 2 * a * b * math.cos(math.radians(kakudo))))
+        print(
+            math.sqrt(
+                float(a * a) + float(b * b) - 2 * a * b * math.cos(math.radians(kakudo))
+            )
+        )

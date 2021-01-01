@@ -7,6 +7,7 @@
 
 # From solution
 
+
 class Solution:
     def constructMaximumBinaryTree(self, nums):
         if nums is None:
@@ -17,10 +18,11 @@ class Solution:
         node = TreeNode(new_val)
         if len(nums[:split_index]):
             node.left = self.constructMaximumBinaryTree(nums[:split_index])
-        if len(nums[split_index + 1:]):
-            node.right = self.constructMaximumBinaryTree(nums[split_index + 1:])
+        if len(nums[split_index + 1 :]):
+            node.right = self.constructMaximumBinaryTree(nums[split_index + 1 :])
 
         return node
+
 
 # Failed by own solution
 class Solution:
@@ -29,9 +31,13 @@ class Solution:
         max_idx = nums.index(max_val)
         root_node = TreeNode(max_val)
         print(nums[:max_idx])
-        print(nums[max_idx + 1:])
-        root_node.left = self.store_val_to_list(sorted(nums[:max_idx], reverse=True), left=True)
-        root_node.right = self.store_val_to_list(sorted(nums[max_idx + 1:], reverse=True), left=True)
+        print(nums[max_idx + 1 :])
+        root_node.left = self.store_val_to_list(
+            sorted(nums[:max_idx], reverse=True), left=True
+        )
+        root_node.right = self.store_val_to_list(
+            sorted(nums[max_idx + 1 :], reverse=True), left=True
+        )
         print(root_node.right)
         return root_node
 

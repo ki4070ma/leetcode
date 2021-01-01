@@ -16,15 +16,15 @@ for _ in range(8):
             else:
                 d[s] = c
         else:
-            str_ans = '0' * N
+            str_ans = "0" * N
             for s, c in d.items():
                 if s == 1 and c == 0 and N != 1:
                     RET = -1
                     break
-                str_ans = str_ans[:s-1] + str(c) + str_ans[s:]
+                str_ans = str_ans[: s - 1] + str(c) + str_ans[s:]
             else:
-                if str_ans[0] == '0' and N != 1:
-                    str_ans = '1' + str_ans[1:]
+                if str_ans[0] == "0" and N != 1:
+                    str_ans = "1" + str_ans[1:]
                 RET = int(str_ans)
     assert RET == int(input().rstrip())
     print(RET)

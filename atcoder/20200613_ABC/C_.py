@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
+
 def show(ret):
-    print(' '.join([str(x) for x in ret]))
+    print(" ".join([str(x) for x in ret]))
+
 
 for _ in range(3):
     N, K = map(int, input().rstrip().split())
@@ -19,4 +21,4 @@ for _ in range(3):
         As = ret[:]
         show(ret)
     show(ret)
-    print('----')
+    print("----")

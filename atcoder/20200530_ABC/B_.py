@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-
 for _ in range(1):
     from collections import deque
 
@@ -11,9 +10,8 @@ for _ in range(1):
     answer = deque()
     window = deque(maxlen=3)
     for a in d:
-        if a == '?':
-            answer.append('D')
+        if a == "?":
+            answer.append("D")
         else:
             answer.append(a)
-    print(''.join(answer))
-
+    print("".join(answer))

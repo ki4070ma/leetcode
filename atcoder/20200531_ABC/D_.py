@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -16,6 +17,7 @@ def prime_factorize(n):
         a.append(n)
     return a
 
+
 def calc(n):
     ret = 0
     for i in range(1, 1000):
@@ -24,9 +26,10 @@ def calc(n):
             ret = i
             break
         elif n < 0:
-            ret = i-1
+            ret = i - 1
             break
     return ret
+
 
 for _ in range(5):
     N = int(input().rstrip())

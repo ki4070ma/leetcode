@@ -5,8 +5,8 @@
 #         self.left = None
 #         self.right = None
 
-class Solution:
 
+class Solution:
     def __init__(self):
         self.target_list = []
 
@@ -23,9 +23,9 @@ class Solution:
         if node.right:
             self.showNodeVal(node.right)
 
+
 # From discuss
 class Solution:
-
     def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
         target_list = []
         return sum(self.store_target_list(root, L, R, target_list))

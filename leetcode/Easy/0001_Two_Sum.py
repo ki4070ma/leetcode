@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -8,7 +9,7 @@ class Solution(object):
         :rtype: List[int]
         """
         for i, x in enumerate(nums):
-            for j, y in enumerate(nums[i + 1:]):
+            for j, y in enumerate(nums[i + 1 :]):
                 if x + y == target:
                     return [i, i + 1 + j]
 

@@ -13,4 +13,3 @@ for _ in range(3):
     a = l.index(tuple(P))
     b = l.index(tuple(Q))
     print(abs(a - b))
-

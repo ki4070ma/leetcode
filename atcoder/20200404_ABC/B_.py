@@ -8,6 +8,6 @@ for _ in range(3):
     total = sum(As)
     count = len([True for x in As if x >= total / (4 * M)])
     if count >= M:
-        print('Yes')
+        print("Yes")
     else:
-        print('No')
+        print("No")

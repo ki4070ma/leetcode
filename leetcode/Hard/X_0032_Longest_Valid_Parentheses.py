@@ -14,14 +14,14 @@ class Solution:
     def chk_parentheses(self, s: str) -> bool:
         stack = []
         for c in list(s):
-            if c == '(':
+            if c == "(":
                 stack.append(c)
             else:
                 if len(stack) == 0:
                     return False
-                if '(' not in stack:
+                if "(" not in stack:
                     return False
-                if '(' == stack[-1]:
+                if "(" == stack[-1]:
                     stack = stack[:-1]
                 else:
                     return False

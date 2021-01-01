@@ -3,6 +3,6 @@
 for _ in range(2):
     S = input().rstrip()
     if S.isupper():
-        print('A')
+        print("A")
     else:
-        print('a')
+        print("a")

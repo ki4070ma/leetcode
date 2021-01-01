@@ -9,23 +9,21 @@ for _ in range(3):
         b = int(input().rstrip())
         for i, x in enumerate(A):
             if A[i] == b:
-                A[i] = 'o'
+                A[i] = "o"
 
     ret = False
     for i in range(3):
-        if A[i] == A[i+1] == A[i+2] == 'o' or \
-            A[i] == A[i+3] == A[i+6] == 'o':
+        if A[i] == A[i + 1] == A[i + 2] == "o" or A[i] == A[i + 3] == A[i + 6] == "o":
             ret = True
             break
 
-    if A[0] == A[4] == A[8] == 'o' or \
-        A[2] == A[4] == A[6] == 'o':
+    if A[0] == A[4] == A[8] == "o" or A[2] == A[4] == A[6] == "o":
         ret = True
 
     if ret:
-        print('Yes')
+        print("Yes")
     else:
-        print('No')
+        print("No")
 
     # Answer2
     # if A[0] == A[1] == A[2] == 'o' or \

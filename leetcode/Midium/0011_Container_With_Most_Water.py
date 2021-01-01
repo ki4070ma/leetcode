@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Solution(object):
     def maxArea(self, height):
         """

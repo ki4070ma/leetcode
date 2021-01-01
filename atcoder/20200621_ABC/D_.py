@@ -15,18 +15,16 @@ for _ in range(3):
     d = {}
     for i in range(Q):
         b, c = map(int, input().rstrip().split())
-        d[i] = {'b': b, 'c': c}
+        d[i] = {"b": b, "c": c}
     # print(d)
     for i in sorted(d.keys()):
-        if d[i]['b'] in As.keys():
-            diff = d[i]['c'] - d[i]['b']
-            diff_num = As.pop(d[i]['b'])
-            if d[i]['c'] in As.keys():
-                As[d[i]['c']] += diff_num
+        if d[i]["b"] in As.keys():
+            diff = d[i]["c"] - d[i]["b"]
+            diff_num = As.pop(d[i]["b"])
+            if d[i]["c"] in As.keys():
+                As[d[i]["c"]] += diff_num
             else:
-                As[d[i]['c']] = diff_num
-            answer += (diff * diff_num)
+                As[d[i]["c"]] = diff_num
+            answer += diff * diff_num
         print(answer)
-    print('---')
-
-
+    print("---")

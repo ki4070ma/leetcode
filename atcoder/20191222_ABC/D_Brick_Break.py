@@ -14,6 +14,6 @@ for _ in range(3):
             base += 1
 
     if len(l) == 0:
-        print('-1')
+        print("-1")
     else:
         print(N - len(l))

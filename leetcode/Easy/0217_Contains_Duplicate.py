@@ -4,7 +4,7 @@ class Solution:
             return False
         d = {}
         for num in nums:
-            if d.get(num, 'a') == 'a':
+            if d.get(num, "a") == "a":
                 d[num] = 1
             else:
                 d[num] += 1

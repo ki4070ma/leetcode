@@ -7,11 +7,11 @@ for _ in range(6):
     ok_flg = False
     for i in range(A, B + 1):
         if i % K == 0:
-            print('OK')
+            print("OK")
             ok_flg = True
             break
     if not ok_flg:
-        print('NG')
+        print("NG")
 
     # amari = A % K
     # if K == 1:
@@ -22,4 +22,3 @@ for _ in range(6):
     #     print('OK')
     # else:
     #     print('NG')
-

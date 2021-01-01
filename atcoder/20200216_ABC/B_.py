@@ -11,7 +11,6 @@ for _ in range(2):
             fail_flg = True
             break
     if fail_flg:
-        print('DENIED')
+        print("DENIED")
     else:
-        print('APPROVED')
-
+        print("APPROVED")

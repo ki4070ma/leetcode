@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -8,7 +9,7 @@ class Solution(object):
         """
         # Brute force
         if not strs:
-            return ''
+            return ""
         min_word = strs[0]
         minlength = len(strs[0])
         for x in range(len(strs)):
@@ -17,8 +18,8 @@ class Solution(object):
                 min_word = strs[x]
         for w in range(minlength, 0, -1):
             for l in range(len(min_word) - w + 1):
-                s = min_word[l:l+w]
+                s = min_word[l : l + w]
                 chk = [x for x in strs if x.startswith(s)]
                 if len(chk) == len(strs):
                     return s
-        return ''
+        return ""

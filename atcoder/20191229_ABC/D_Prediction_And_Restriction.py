@@ -13,22 +13,22 @@ for _ in range(3):
 
     history = []
 
-    HANDS = ['r', 's', 'p']
-    WIN_HANDS = {'r': 'p', 'p': 's', 's': 'r'}
-    WIN_SCORE = {'r': R, 's': S, 'p': P}
+    HANDS = ["r", "s", "p"]
+    WIN_HANDS = {"r": "p", "p": "s", "s": "r"}
+    WIN_SCORE = {"r": R, "s": S, "p": P}
 
     total_score = 0
     for i, cpu_hand in enumerate(T):
-        unavailable_hand = history[-K] if i >= K else ''
+        unavailable_hand = history[-K] if i >= K else ""
         hand = WIN_HANDS[cpu_hand]
 
         if hand != unavailable_hand:
             history.append(hand)
             total_score += WIN_SCORE[hand]
         else:
-            if i + K < len(T) and WIN_HANDS[T[i+K]] != hand:
-                history.append(WIN_HANDS[T[i+K]])
-                total_score += WIN_SCORE[WIN_HANDS[T[i+K]]]
+            if i + K < len(T) and WIN_HANDS[T[i + K]] != hand:
+                history.append(WIN_HANDS[T[i + K]])
+                total_score += WIN_SCORE[WIN_HANDS[T[i + K]]]
             else:
                 tmp_hands = copy.deepcopy(HANDS)
                 tmp_hands.remove(hand)

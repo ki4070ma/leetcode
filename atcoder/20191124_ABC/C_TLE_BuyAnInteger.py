@@ -2,8 +2,10 @@
 
 from sys import stdin
 
+
 def calc(N):
     return A * N + B * len(str(N))
+
 
 for _ in range(4):
     A, B, X = map(int, stdin.readline().rstrip().split())
@@ -11,7 +13,7 @@ for _ in range(4):
     # print(B)
     # print(X)
     # "A x N + B x d(N)"
-    max_N = 10**9
+    max_N = 10 ** 9
     max_price = calc(max_N)
     if X > max_price:
         print(max_N)

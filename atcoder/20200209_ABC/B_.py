@@ -2,4 +2,4 @@
 
 for _ in range(3):
     S = input().rstrip()
-    print('x' * len(S))
+    print("x" * len(S))

@@ -14,6 +14,6 @@ for _ in range(3):
         results[S] += 1
     for i in range(N):
         if K - (Q - results[str(i + 1)]) > 0:
-            print('Yes')
+            print("Yes")
         else:
-            print('No')
+            print("No")

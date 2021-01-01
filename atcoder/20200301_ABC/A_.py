@@ -8,7 +8,8 @@ for _ in range(3):
 
     # Answer2
     import math
-    print(math.ceil(N/2))
+
+    print(math.ceil(N / 2))
 
     # Answer3
     # if N % 2 == 0:

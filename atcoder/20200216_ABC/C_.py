@@ -23,4 +23,4 @@ for _ in range(5):
     for a in sorted(rets):
         print(a)
 
-    print('---')
+    print("---")

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         """
@@ -19,7 +20,7 @@ class Solution(object):
         N = len(set(list(s)))
         for i in range(N, 0, -1):
             for x in range(0, len(s) - i + 1):
-                if i == max([len(set(s[x:x + i]))]):
+                if i == max([len(set(s[x : x + i]))]):
                     return i
         return 0
 

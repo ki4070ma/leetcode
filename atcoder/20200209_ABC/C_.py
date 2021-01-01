@@ -11,6 +11,6 @@ for _ in range(3):
         else:
             d[x] += 1
     if len(As) == len(d):
-        print('YES')
+        print("YES")
     else:
-        print('NO')
+        print("NO")

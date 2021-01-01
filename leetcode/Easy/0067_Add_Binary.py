@@ -1,6 +1,6 @@
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
-        ret = ''
+        ret = ""
         length = max(len(a), len(b))
         kuriage = False
         a = a[::-1]
@@ -23,5 +23,5 @@ class Solution:
             ret = str(ret_val) + ret
         else:
             if kuriage:
-                ret = '1' + ret
+                ret = "1" + ret
         return ret

@@ -23,7 +23,7 @@ for _ in range(10):
                 d[(h, w)] = d[(h, w - 1)]
             else:
                 d[(h, w)] = 0
-            if D[h][w] == '#':
+            if D[h][w] == "#":
                 d[(h, w)] += 1
     print(d[(H - 1, W - 1)])
     assert d[(H - 1, W - 1)] == int(input().rstrip())

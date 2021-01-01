@@ -6,6 +6,6 @@ for _ in range(5):
 
     getcontext().prec = 500  # NG: 1000
     if (Decimal(a).sqrt() + Decimal(b).sqrt()) < Decimal(c).sqrt():
-        print('Yes')
+        print("Yes")
     else:
-        print('No')
+        print("No")

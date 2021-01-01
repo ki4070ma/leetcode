@@ -5,9 +5,9 @@ for _ in range(2):
     for _ in range(100):
         C -= B
         if C < 1:
-            print('Yes')
+            print("Yes")
             break
         A -= D
         if A < 1:
-            print('No')
+            print("No")
             break

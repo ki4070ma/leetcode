@@ -9,5 +9,3 @@ for _ in range(3):
         print(N // longer)
     else:
         print(N // longer + 1)
-
-

@@ -7,10 +7,10 @@ for _ in range(3):
     d = abs(A - B)
     v = V - W
     if v <= 0:
-        print('NO')
+        print("NO")
     elif d % v != 0:
-        print('NO')
+        print("NO")
     elif T < d / v:
-        print('NO')
+        print("NO")
     else:
-        print('YES')
+        print("YES")

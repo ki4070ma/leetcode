@@ -9,4 +9,3 @@ for _ in range(5):
         print(int(tmp / 2))
     else:
         print(int((tmp - 1) / 2 + 1))
-

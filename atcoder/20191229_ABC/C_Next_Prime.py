@@ -2,15 +2,17 @@
 
 from sys import stdin
 
+
 def is_prime_editorial(num):
     if num <= 1:
         return False
     i = 2
-    while (i*i < num):
+    while i * i < num:
         if num % i == 0:
             return False
         i += 1
     return True
+
 
 def is_prime(num):
     if num < 2:
@@ -21,13 +23,15 @@ def is_prime(num):
         return False
 
     from math import sqrt
+
     sqrtnum = sqrt(num)
     i = 3
-    while (i <= sqrtnum):
+    while i <= sqrtnum:
         if num % i == 0:
             return False
         i += 2
     return True
+
 
 for _ in range(3):
     X = int(stdin.readline().rstrip())

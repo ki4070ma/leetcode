@@ -10,21 +10,21 @@ for _ in range(3):
     q.extend(list(S))
     for _ in range(Q):
         l = input().rstrip()
-        if l.startswith('1'):
+        if l.startswith("1"):
             reversed = False if reversed else True
         else:
             _, F, C = l.split()
-            if F == '1':
+            if F == "1":
                 if reversed:
                     q.append(C)
                 else:
                     q.appendleft(C)
-            elif F == '2':
+            elif F == "2":
                 if reversed:
                     q.appendleft(C)
                 else:
                     q.append(C)
-    ret = ''.join(list(q)[::-1]) if reversed else ''.join(list(q))
+    ret = "".join(list(q)[::-1]) if reversed else "".join(list(q))
     print(ret)
     assert ret == input().rstrip()
     print(input().rstrip())

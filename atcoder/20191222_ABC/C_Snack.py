@@ -14,7 +14,7 @@ for _ in range(3):
         A = tmp
 
     r = A % B
-    while (r != 0):
+    while r != 0:
         A = B
         B = r
         r = A % B

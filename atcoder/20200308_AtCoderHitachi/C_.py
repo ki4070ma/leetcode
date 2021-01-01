@@ -12,7 +12,7 @@ for _ in range(4):
     import sys
 
     # 2. Idea: WA
-    while (t < T + 0.5):
+    while t < T + 0.5:
         min_t = sys.maxsize
         idx = 0
         for i in range(len(shops)):
@@ -20,13 +20,13 @@ for _ in range(4):
             if (t + 1) * a + b < min_t:
                 min_t = (t + 1) * a + b
                 idx = i
-        t += (1 + min_t)
+        t += 1 + min_t
         if t <= T + 0.5:
             max_shop_num += 1
         if len(shops) == 0:
             break
         else:
-            shops = shops[:idx] + shops[idx + 1:]
+            shops = shops[:idx] + shops[idx + 1 :]
 
     print(max_shop_num)
 

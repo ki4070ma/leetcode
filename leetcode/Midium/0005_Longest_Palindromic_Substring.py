@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Solution(object):
     def longestPalindrome(self, s):
         """
@@ -13,7 +14,7 @@ class Solution(object):
             # Odd
             for l in range(min([center, len(s) - 1 - center]) + 1):
                 if s[center - l] == s[center + l]:
-                    tmp = s[center - l:center + l + 1]
+                    tmp = s[center - l : center + l + 1]
                     if len(ret) < len(tmp):
                         ret = tmp
                 else:
@@ -21,7 +22,7 @@ class Solution(object):
             # Even
             for l in range(min([center + 1, len(s) - (center + 1)])):
                 if s[center - l] == s[center + l + 1]:
-                    tmp = s[center - l:(center + l + 1) + 1]
+                    tmp = s[center - l : (center + l + 1) + 1]
                     if len(ret) < len(tmp):
                         ret = tmp
                 else:

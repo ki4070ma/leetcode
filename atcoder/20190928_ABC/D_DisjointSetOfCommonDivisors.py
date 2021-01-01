@@ -9,7 +9,7 @@ for _ in range(2):
     Bs = []
 
     ret = []
-    for i in range(2, min(A, B)+1):
+    for i in range(2, min(A, B) + 1):
         if A % i == 0 and B % i == 0:
             ret.append(i)
 
@@ -18,8 +18,8 @@ for _ in range(2):
     result = []
     for i, a in enumerate(ret):
         data = []
-        for b in ret[i+1:]:
-            tmp = 'T' if b % a == 0 else 'F'
+        for b in ret[i + 1 :]:
+            tmp = "T" if b % a == 0 else "F"
             data.append(tmp)
         if data:
             print([a] + data[::-1])

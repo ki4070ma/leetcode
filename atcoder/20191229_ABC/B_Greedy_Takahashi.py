@@ -12,6 +12,4 @@ for _ in range(5):
     if B < 0:
         B = 0
 
-    print('{} {}'.format(A, B))
-
-
+    print("{} {}".format(A, B))

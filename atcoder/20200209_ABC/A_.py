@@ -7,4 +7,4 @@ for _ in range(2):
 
     d = {S: A, T: B}
     d[U] -= 1
-    print('{} {}'.format(d[S], d[T]))
+    print("{} {}".format(d[S], d[T]))

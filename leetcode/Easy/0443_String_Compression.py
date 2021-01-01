@@ -20,6 +20,7 @@ class Solution:
                         ret.append(i)
         if len(chars) == 1:
             import copy
+
             ret = copy.copy(chars)
         del chars[:]
         chars.extend(ret)

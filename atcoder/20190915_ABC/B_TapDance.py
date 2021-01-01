@@ -3,8 +3,8 @@
 from sys import stdin
 
 for _ in range(5):
-    good_odd = ['R', 'U', 'D']  # Kisuu, Right
-    good_even = ['L', 'U', 'D']  # Guusuu, Left
+    good_odd = ["R", "U", "D"]  # Kisuu, Right
+    good_even = ["L", "U", "D"]  # Guusuu, Left
     is_Right_good = True
     is_Left_good = True
     S = list(stdin.readline().rstrip())
@@ -17,6 +17,6 @@ for _ in range(5):
             if s not in good_odd:
                 is_Right_good = False
     if is_Right_good and is_Left_good:
-        print('Yes')
+        print("Yes")
     else:
-        print('No')
+        print("No")

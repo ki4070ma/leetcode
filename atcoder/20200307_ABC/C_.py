@@ -11,4 +11,3 @@ for _ in range(4):
         ret = -1
     print(ret)
     assert ret == int(input().rstrip())
-

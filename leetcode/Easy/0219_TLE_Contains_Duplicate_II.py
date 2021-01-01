@@ -8,7 +8,7 @@ class Solution:
         elif len(nums) == k:
             d = {}
             for n in nums:
-                if d.get(n, 'a') == 'a':
+                if d.get(n, "a") == "a":
                     d[n] = 1
                 else:
                     d[n] += 1
@@ -17,8 +17,8 @@ class Solution:
 
         for i in range(len(nums) - k):
             d = {}
-            for n in nums[i:i + k + 1]:
-                if d.get(n, 'a') == 'a':
+            for n in nums[i : i + k + 1]:
+                if d.get(n, "a") == "a":
                     d[n] = 1
                 else:
                     d[n] += 1

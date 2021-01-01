@@ -9,6 +9,6 @@ for _ in range(4):
         else:
             d[x] = 1
     if 2 in d.values():
-        print('Yes')
+        print("Yes")
     else:
-        print('No')
+        print("No")
